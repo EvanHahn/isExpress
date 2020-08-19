@@ -16,13 +16,13 @@
   "author": "Evan Hahn (http://evanhahn.com)",
   "license": "Unlicense",
   "devDependencies": {
-    "mocha": "~1.18.2",
-    "connect": "~2.14.3",
-    "express": "~3.5.1",
-    "supertest": "~0.10.0"
+    "connect": "^3.7.0",
+    "express": "^4.17.1",
+    "mocha": "^8.1.1",
+    "supertest": "^4.0.2"
   },
   "repository": {
-   "type": "git",
+    "type": "git",
     "url": "git://github.com/EvanHahn/isExpress.git"
   },
   "bugs": {
