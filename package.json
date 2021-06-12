@@ -13,7 +13,7 @@
     "req",
     "res"
   ],
-  "author": "Evan Hahn (http://evanhahn.com)",
+  "author": "Evan Hahn (https://evanhahn.com)",
   "license": "Unlicense",
   "devDependencies": {
     "connect": "^3.7.0",
