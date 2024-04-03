@@ -34,5 +34,8 @@
   },
   "bugs": {
     "url": "https://github.com/EvanHahn/isExpress/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
