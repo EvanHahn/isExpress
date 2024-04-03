@@ -1,4 +1,4 @@
-var express;
+let express;
 try {
   express = require("express");
 } catch (err) {
@@ -6,24 +6,15 @@ try {
 }
 
 if (express) {
-  var http = require("http");
-  var expectedProto = express().__proto__;
-
-  module.exports = function isExpress(check) {
-    if (!check) {
-      return false;
-    } else if (typeof check.app !== "function") {
-      return false;
-    } else if (check.app.__proto__ !== expectedProto) {
-      return false;
-    } else if (
-      !(check instanceof http.IncomingMessage) &&
-      !(check instanceof http.OutgoingMessage)
-    ) {
-      return false;
-    } else {
-      return true;
-    }
+  const http = require("http");
+  const expectedProto = Object.getPrototypeOf(express());
+  module.exports = function isExpress(value) {
+    return Boolean(
+      (value instanceof http.IncomingMessage ||
+        value instanceof http.OutgoingMessage) &&
+        typeof value.app === "function" &&
+        Object.getPrototypeOf(value.app) === expectedProto,
+    );
   };
 } else {
   module.exports = function isExpress() {
