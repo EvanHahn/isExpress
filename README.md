@@ -1,5 +1,4 @@
-isExpress
-=========
+# isExpress
 
 Given `req` and `res`, is it an Express app? A simple function.
 

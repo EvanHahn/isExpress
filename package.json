@@ -4,6 +4,11 @@
   "description": "given `req` or `res`, is it an Express app?",
   "main": "index.js",
   "scripts": {
+    "format": "prettier --write .",
+    "lint:prettier": "prettier --check .",
+    "lint:eslint": "eslint .",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "pretest": "npm run lint",
     "test": "mocha"
   },
   "keywords": [
@@ -17,8 +22,10 @@
   "license": "Unlicense",
   "devDependencies": {
     "connect": "^3.7.0",
+    "eslint": "^8.57.0",
     "express": "^4.19.2",
     "mocha": "^10.4.0",
+    "prettier": "^3.2.5",
     "supertest": "^6.3.4"
   },
   "repository": {
