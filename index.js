@@ -1,7 +1,7 @@
 let express;
 try {
   express = require("express");
-} catch (err) {
+} catch {
   // Ignored
 }
 
