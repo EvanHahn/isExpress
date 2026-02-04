@@ -12,8 +12,8 @@ if (express) {
     return Boolean(
       (value instanceof http.IncomingMessage ||
         value instanceof http.OutgoingMessage) &&
-        typeof value.app === "function" &&
-        Object.getPrototypeOf(value.app) === expectedProto,
+      typeof value.app === "function" &&
+      Object.getPrototypeOf(value.app) === expectedProto,
     );
   };
 } else {
